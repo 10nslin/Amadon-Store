@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Welcome To Amadon</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        
+    </head>
+    <body>
+        <h1 class="text-center display-2 mt-2 mb-3">Amadon Store</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Dojo T-shirt</td>
+                    <td>$ {{prices.1015}}</td>
+                    <td>
+                      <form action='/amadon/buy' method='post'>
+                        {% csrf_token %}
+                        <select class="mr-2 pl-2"name='quantity'>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                        </select>
+                        <input type='hidden' name='product_id' value='1015' />
+                        <input class="btn btn-secondary ml-2" type='submit' value='Buy!'/>
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Dojo Sweater</td>
+                    <td>$ {{prices.1016}}</td>
+                    <td>
+                      <form action='/amadon/buy' method='post'>
+                        {% csrf_token %}
+                        <select class="mr-2 pl-2"name='quantity'>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                        </select>
+                        <input type='hidden' name='product_id' value='1016' />
+                        <input class="btn btn-secondary ml-2" type='submit' value='Buy!'/>
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Dojo Cup</td>
+                    <td>$ {{prices.1017}}</td>
+                    <td>
+                      <form action='/amadon/buy' method='post'>
+                        {% csrf_token %}
+                        <select class="mr-2 pl-2"name='quantity'>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                        </select>
+                        <input type='hidden' name='product_id' value='1017' />
+                        <input class="btn btn-secondary ml-2" type='submit' value='Buy!'/>
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Algorithm Book</td>
+                    <td>$ {{prices.1018}}</td>
+                    <td>
+                      <form action='/amadon/buy' method='post'>
+                        {% csrf_token %}
+                        <select class="mr-2 pl-2"name='quantity'>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                        </select>
+                        <input type='hidden' name='product_id' value='1018' />
+                        <input class="btn btn-secondary ml-2" type='submit' value='Buy!'/>
+                      </form>
+                    </td>
+                  </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

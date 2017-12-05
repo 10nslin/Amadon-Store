@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Amadon Thanks You</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        
+    </head>
+    <body class="text-center mt-4">
+        <h2 class="display-4 mb-3">Thank You For Your Business</h2>
+        <p class="display-6 border-bottom-0 border border-secondary pt-2">We charged your credit card for ${{request.session.order}}</p>
+        <p class="display-6 ">You have ordered {{request.session.count}} items so far and spent ${{request.session.total}} with Amadon.com!</p>
+        <p><a  class="btn btn-link" href="/" >Go back</a></p>
+    </body>
+</html>
